@@ -64,7 +64,7 @@ public class BabySitter {
         System.out.println(name + " says, \"" + message + "\"");
     }
 
-    public HashMap<String, Long> calculateHours(BabysittingJob babysittingJob) {
+    public HashMap<String, Integer> calculateHours(BabysittingJob babysittingJob) {
 
         if (babysittingJob != null) {
 
@@ -76,13 +76,13 @@ public class BabySitter {
             //dont need to subtract because calculated from 0 or midnight
             Double hoursMidnighttoEnd = babysittingJob.getEndingTime();
 
-            long hoursStartingToBedtimeLong = removeFractional(hoursStartingToBedtime);
-            long hoursBedtimeToMidnightLong = removeFractional(hoursBedtimeToMidnight);
-            long hoursMidnighttoEndLong = removeFractional(hoursMidnighttoEnd);
+            Integer hoursStartingToBedtimeLong = removeFractional(hoursStartingToBedtime);
+            Integer hoursBedtimeToMidnightLong = removeFractional(hoursBedtimeToMidnight);
+            Integer hoursMidnighttoEndLong = removeFractional(hoursMidnighttoEnd);
 
-            Long hours = removeFractional(hoursStartingToBedtime) + removeFractional(hoursBedtimeToMidnight) + removeFractional(hoursMidnighttoEnd);
+            Integer hours = removeFractional(hoursStartingToBedtime) + removeFractional(hoursBedtimeToMidnight) + removeFractional(hoursMidnighttoEnd);
 
-            HashMap<String, Long> hourMap = new HashMap<>();
+            HashMap<String, Integer> hourMap = new HashMap<>();
             hourMap.put("hoursStartingToBedtimeLong", hoursStartingToBedtimeLong);
             hourMap.put("hoursBedtimeToMidnightLong", hoursBedtimeToMidnightLong);
             hourMap.put("hoursMidnighttoEndLong", hoursMidnighttoEndLong);
@@ -97,7 +97,7 @@ public class BabySitter {
 
         if (babysittingJob != null) {
 
-            HashMap<String, Long> hoursMap = calculateHours(babysittingJob);
+            HashMap<String, Integer> hoursMap = calculateHours(babysittingJob);
 
             Double pay = (double) calculatePay(hoursMap.get("hoursStartingToBedtimeLong"), hoursMap.get("hoursBedtimeToMidnightLong"), hoursMap.get("hoursMidnighttoEndLong"));
 
@@ -114,9 +114,9 @@ public class BabySitter {
                 + hoursMidnighttoEndLong * HourlyRates.HOURLY_RATE_FROM_MIDNIGHT_TO_END;
     }
 
-    private Long removeFractional(Double hoursStartingToBedtime) {
+    private Integer removeFractional(Double hoursStartingToBedtime) {
+        return (int) Math.floor(hoursStartingToBedtime);
 
-        return Math.round(hoursStartingToBedtime);
     }
 
     public String formatMoney(Double money) {
