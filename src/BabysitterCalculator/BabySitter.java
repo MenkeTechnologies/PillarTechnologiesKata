@@ -1,9 +1,9 @@
-package PillarKata;
+package BabysitterCalculator;
 
 import java.text.NumberFormat;
 import java.util.HashMap;
 
-import static PillarKata.Keys.*;
+import static BabysitterCalculator.Keys.*;
 
 /**
  * Created by jacobmenke on 4/27/17.

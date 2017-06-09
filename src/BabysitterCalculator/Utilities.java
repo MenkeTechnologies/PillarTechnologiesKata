@@ -1,11 +1,11 @@
-package PillarKata;
+package BabysitterCalculator;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import static PillarKata.Keys.*;
+import static BabysitterCalculator.Keys.*;
 
 /**
  * Created by jacobmenke on 6/9/17.

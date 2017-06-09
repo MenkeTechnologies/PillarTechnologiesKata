@@ -1,4 +1,4 @@
-package PillarKata;
+package BabysitterCalculator;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

@@ -1,8 +1,8 @@
-package PillarKata;
+package BabysitterCalculator;
 
 import java.util.HashMap;
 
-import static PillarKata.Keys.*;
+import static BabysitterCalculator.Keys.*;
 
 /**
  * Created by jacobmenke on 5/18/17.
