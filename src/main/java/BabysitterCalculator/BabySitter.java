@@ -50,7 +50,6 @@ public class BabySitter {
             } else {
                 reason += ", not to mention the late ending hours at " + timesData.get(ENDING_TIME) + ".";
 
-
             }
         }
 

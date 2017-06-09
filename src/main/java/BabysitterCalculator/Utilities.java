@@ -35,7 +35,7 @@ public class Utilities {
         personnelData.put(BABYSITTER_NAME, "Jane Doe");
         personnelData.put(JOB_NAME, "James' House");
         timesData.put(STARTING_TIME, "8:30 pm");
-        timesData.put(BED_TIME, "11:00 pm");
+        timesData.put(BED_TIME, "11:30 pm");
         timesData.put(ENDING_TIME, "3:00 am");
     }
 
@@ -140,9 +140,9 @@ public class Utilities {
         HashMap<String, String> personnelData = new HashMap<>();
         HashMap<String, String> timesData = new HashMap<>();
 
-//        getDataInteractively(personnelData, timesData);
+        getDataInteractively(personnelData, timesData);
 
-        getDataNonInteractively(personnelData, timesData);
+//        getDataNonInteractively(personnelData, timesData);
 
         HashMap<String, HashMap<String, String>> allData = new HashMap<>();
 

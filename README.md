@@ -11,7 +11,8 @@ Dependencies are git, maven and java
 ```
 git clone
 cd PillarTechnologiesKata
-mvn clean package && java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
+mvn clean package
+java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
 
 
