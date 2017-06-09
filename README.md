@@ -6,8 +6,8 @@ Instructions for Compiling and Running Project
 ```
 git clone
 cd PillarTechnologiesKata/src
-javac BabysitterCalculator/*.java
-java BabysitterCalculator.Main
+javac main.java.BabysitterCalculator/*.java
+java main.java.BabysitterCalculator.Main
 ```
 
 
