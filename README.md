@@ -9,7 +9,7 @@ Dependencies are git, maven and java
 
 
 ```
-git clone
+git clone https://github.com/MenkeTechnologies/PillarTechnologiesKata.git
 cd PillarTechnologiesKata
 mvn clean package
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
