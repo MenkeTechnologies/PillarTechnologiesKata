@@ -119,6 +119,7 @@ public class Utilities {
         for (int i = 0; i < 50; i++) {
             System.out.print("_");
         }
+        System.out.print("\n");
         //empty line for readability
         System.out.println();
     }
