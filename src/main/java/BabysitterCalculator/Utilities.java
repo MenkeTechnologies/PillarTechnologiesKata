@@ -11,23 +11,35 @@ import static BabysitterCalculator.Keys.*;
  * Created by jacobmenke on 6/9/17.
  */
 public class Utilities {
+    /**
+     * Get all necessary data in while loop structure, looping until valid
+     * @param personnelData
+     * @param timesData
+     * @return
+     */
     private static void getDataInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
 
         Scanner scanner = new Scanner(System.in);
-            loopUntilValid(personnelData, scanner, BABYSITTER_NAME);
 
-            loopUntilValid(personnelData, scanner, JOB_NAME);
+        loopUntilValid(personnelData, scanner, BABYSITTER_NAME);
 
-            System.out.println("Please enter the times.  Format is h:mm am/pm");
+        loopUntilValid(personnelData, scanner, JOB_NAME);
 
-            loopUntilValid(timesData, scanner, STARTING_TIME);
+        System.out.println("Please enter the times.  Format is h:mm am/pm");
 
-            loopUntilValid(timesData, scanner, BED_TIME);
+        loopUntilValid(timesData, scanner, STARTING_TIME);
 
-            loopUntilValid(timesData, scanner, ENDING_TIME);
+        loopUntilValid(timesData, scanner, BED_TIME);
 
+        loopUntilValid(timesData, scanner, ENDING_TIME);
     }
 
+
+    /**
+     * For quick testing purposes, hard code data into the two main hash maps
+     * @param personnelData
+     * @param timesData
+     */
     private static void getDataNonInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
         personnelData.put(BABYSITTER_NAME, "Jane Doe");
         personnelData.put(JOB_NAME, "James' House");
@@ -36,6 +48,12 @@ public class Utilities {
         timesData.put(ENDING_TIME, "2:00 am");
     }
 
+    /**
+     * Build up the prompts and invalid messages
+     * @param dataMap
+     * @param scanner
+     * @param dataDescriptor controls switch statement
+     */
     private static void loopUntilValid(HashMap<String, String> dataMap, Scanner scanner, String dataDescriptor) {
         String prompt = "Please enter the ";
         String invalidMessage = "Invalid ";
@@ -103,6 +121,13 @@ public class Utilities {
         System.out.println();
     }
 
+    /**
+     * Check if the starting, bed and ending times are valid
+     * @param possibleTime
+     * @return properly formatted and valid time
+     * @throws Exception if invalid time
+     */
+
     static String sanitizeTimes(String possibleTime) throws Exception {
 
         StringBuilder sb = new StringBuilder();
@@ -132,6 +157,11 @@ public class Utilities {
         return time;
     }
 
+    /**
+     * Generate the main HashMap
+     * @param type interactive or noninteractive data input
+     * @return main HashMap containing two Hash Maps
+     */
     static HashMap<String, HashMap<String, String>> getUserData(String type) {
         HashMap<String, String> personnelData = new HashMap<>();
         HashMap<String, String> timesData = new HashMap<>();
@@ -144,6 +174,7 @@ public class Utilities {
 
         HashMap<String, HashMap<String, String>> allData = new HashMap<>();
 
+        //nest HashMaps inside main HashMap
         allData.put("personnelData", personnelData);
         allData.put("timesData", timesData);
 

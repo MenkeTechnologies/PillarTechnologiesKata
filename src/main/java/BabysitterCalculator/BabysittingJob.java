@@ -10,15 +10,15 @@ import java.util.HashMap;
 
 
 class HourlyRates {
+    //constants for hourly rates
     public static final Integer HOURLY_RATE_FROM_START_TO_BEDTIME = 12;
     public static final Integer HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT = 8;
-
     public static final Integer HOURLY_RATE_FROM_MIDNIGHT_TO_END= 16;
 
 }
 
 class Keys {
-    //hash keys
+    //hash keys for data hashmaps
     public static final String BABYSITTER_NAME = "babysitterName";
     public static final String JOB_NAME = "jobName";
     public static final String STARTING_TIME = "startingTime";
@@ -40,10 +40,17 @@ public class BabysittingJob {
 
     HashMap<String, Integer> hoursMap = new HashMap<>();
 
+    /**
+     * Constructor for Babysitting Job
+     * @param jobName
+     * @param startingTime
+     * @param bedTime
+     * @param endingTime
+     */
     public BabysittingJob(String jobName, String startingTime, String bedTime, String endingTime) {
         this.jobName = jobName;
 
-        //convert string time to Double
+        //convert string incoming time to Double
         this.startingTime = formatStringTimeToDouble(startingTime);
         this.endingTime = formatStringTimeToDouble(endingTime);
         this.bedTime = formatStringTimeToDouble(bedTime);
@@ -51,6 +58,9 @@ public class BabysittingJob {
 
     }
 
+    /**
+     *  add 24 hours to times for calculations
+     */
      void compensateFor24Hours() {
          if (startingTime >= 0 && startingTime <= 12){
              startingTime += 24;
@@ -66,23 +76,30 @@ public class BabysittingJob {
         }
     }
 
+    /**
+     * Converts string into double representation of time
+     * @param genericTime
+     * @return double and fractional representation of time
+     */
     private Double formatStringTimeToDouble(String genericTime) {
 
         DateTimeFormatter dtf =DateTimeFormatter.ofPattern("h:mm a");
 
-
         LocalTime localTime = null;
-        //parsing requires AM or PM
+        //parsing requires AM or PM so need to uppercase string input
         try {
             localTime = LocalTime.parse(genericTime.toUpperCase(), dtf);
         } catch (Exception e) {
+            //parsing threw exception so exit
             System.out.println("Invalid time: " + genericTime);
-            System.exit(0);
+            System.exit(1);
         }
 
-
+        //return time as double with fraction, fraction will be floored later
         return (double) localTime.getHour() + (double) localTime.getMinute() / 60;
     }
+
+    //POJO accessors and mutators
 
     public String getJobName() {
         return jobName;
