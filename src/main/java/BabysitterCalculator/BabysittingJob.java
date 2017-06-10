@@ -1,12 +1,10 @@
 package BabysitterCalculator;
 
+import java.security.Key;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
-/**
- * Created by jacobmenke
- */
 
 
 class HourlyRates {
@@ -27,21 +25,26 @@ class Keys {
 
 }
 
-
+/**
+ * Represents a babysitting job
+ */
 public class BabysittingJob {
     private String jobName;
     private Double startingTime;
     private Double endingTime;
     private Double bedTime;
 
-    public void setHoursMap(HashMap<String, Integer> hoursMap) {
-        this.hoursMap = hoursMap;
-    }
 
     HashMap<String, Integer> hoursMap = new HashMap<>();
 
+    HashMap<String, String> timesData = new HashMap<>();
+
+    public HashMap<String, String> getTimesData() {
+        return timesData;
+    }
+
     /**
-     * Constructor for Babysitting Job
+     * Constructor for tests
      * @param jobName
      * @param startingTime
      * @param bedTime
@@ -49,14 +52,35 @@ public class BabysittingJob {
      */
     public BabysittingJob(String jobName, String startingTime, String bedTime, String endingTime) {
         this.jobName = jobName;
-
-        //convert string incoming time to Double
-        this.startingTime = formatStringTimeToDouble(startingTime);
-        this.endingTime = formatStringTimeToDouble(endingTime);
+        this.startingTime = formatStringTimeToDouble(startingTime);;
+        this.endingTime = formatStringTimeToDouble(endingTime);;
         this.bedTime = formatStringTimeToDouble(bedTime);
+
+        this.timesData = new HashMap<>();
+        timesData.put(Keys.STARTING_TIME, startingTime);
+        timesData.put(Keys.ENDING_TIME, endingTime);
+        timesData.put(Keys.BED_TIME, bedTime);
 
 
     }
+
+    /**
+     *
+     * @param jobName
+     * @param timesData
+     */
+    public BabysittingJob(String jobName, HashMap<String, String> timesData) {
+        this.jobName = jobName;
+
+        //convert string incoming time to Double
+        this.startingTime = formatStringTimeToDouble(timesData.get(Keys.STARTING_TIME));
+        this.endingTime = formatStringTimeToDouble(timesData.get(Keys.ENDING_TIME));
+        this.bedTime = formatStringTimeToDouble(timesData.get(Keys.BED_TIME));
+
+        this.timesData = new HashMap<>(timesData);
+    }
+
+
 
     /**
      *  add 24 hours to times for calculations
@@ -133,6 +157,19 @@ public class BabysittingJob {
         this.bedTime = bedTime;
     }
 
+    /**
+     * Setter for hoursMap
+     * Called by babysitter's calculateHours method
+     * @param hoursMap
+     */
+    public void setHoursMap(HashMap<String, Integer> hoursMap) {
+        this.hoursMap = hoursMap;
+    }
+
+    /**
+     * Getter for hoursMap
+     * @return hoursMap used for outputting hours
+     */
     public HashMap<String,Integer> getHoursMap(){
         return hoursMap;
     }

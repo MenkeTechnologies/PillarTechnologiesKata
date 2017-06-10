@@ -8,16 +8,15 @@ import java.util.Scanner;
 import static BabysitterCalculator.Keys.*;
 
 /**
- * created by jacobmenke
+ * Class containing static method utilities for other classes
  */
 public class Utilities {
     /**
      * Get all necessary data in while loop structure, looping until valid
      * @param personnelData
      * @param timesData
-     * @return
      */
-    private static void getDataInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
+    public static void getDataInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -41,7 +40,7 @@ public class Utilities {
      * @param personnelData
      * @param timesData
      */
-    private static void getDataNonInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
+    public static void getDataNonInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
         personnelData.put(BABYSITTER_NAME, "Jane Doe");
         personnelData.put(JOB_NAME, "James' House");
         timesData.put(STARTING_TIME, "8:35 pm");
@@ -55,7 +54,7 @@ public class Utilities {
      * @param scanner
      * @param dataDescriptor controls switch statement
      */
-    private static void loopUntilValid(HashMap<String, String> dataMap, Scanner scanner, String dataDescriptor) {
+    public static void loopUntilValid(HashMap<String, String> dataMap, Scanner scanner, String dataDescriptor) {
         String prompt = "Please enter the ";
         String invalidMessage = "Invalid ";
         String key = dataDescriptor;
@@ -131,7 +130,7 @@ public class Utilities {
      * @throws Exception if invalid time
      */
 
-    static String sanitizeTimes(String possibleTime) throws Exception {
+    public static String sanitizeTimes(String possibleTime) throws Exception {
 
         StringBuilder sb = new StringBuilder();
 
@@ -165,7 +164,7 @@ public class Utilities {
      * @param type interactive or noninteractive data input
      * @return main HashMap containing two Hash Maps
      */
-    static HashMap<String, HashMap<String, String>> getUserData(String type) {
+    public static HashMap<String, HashMap<String, String>> getUserData(String type) {
         HashMap<String, String> personnelData = new HashMap<>();
         HashMap<String, String> timesData = new HashMap<>();
 

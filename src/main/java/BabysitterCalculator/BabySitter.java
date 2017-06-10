@@ -6,7 +6,7 @@ import java.util.HashMap;
 import static BabysitterCalculator.Keys.*;
 
 /**
- * Created by jacobmenke
+ *  Represents a babysitter
  */
 public class BabySitter {
     private String name;
@@ -31,13 +31,13 @@ public class BabySitter {
     /**
      * Babysitter decides whether to accept job or not.  If the job is invalid
      * method will return reason for rejection
-     * @param babysittingJob
-     * @param timesData
+     * @param babysittingJob the job in question
      * @return babysitter's answer
      */
 
-    public String proposeJob(BabysittingJob babysittingJob, HashMap<String, String> timesData) {
+    public String proposeJob(BabysittingJob babysittingJob) {
 
+        HashMap<String, String> timesData = babysittingJob.getTimesData();
         String reason = "";
 
         //check for valid starting and ending times, times are doubles
@@ -140,7 +140,7 @@ public class BabySitter {
 
             HashMap<String, Integer> hoursMap = babysittingJob.getHoursMap();
 
-            Double pay = (double) calculatePay(hoursMap.get("hoursStartingToBedtimeFloored"), hoursMap.get("hoursBedtimeToMidnightFloored"), hoursMap.get("hoursMidnighttoEndFloored"));
+            Double pay = (double) calculatePay(hoursMap.get("hoursStartingToBedtimeFloored"), hoursMap.get("hoursBedtimeToMidnightFloored"), hoursMap.get("hoursMidnightToEndFloored"));
 
             //no fractional hours
             return formatMoney(pay);

@@ -8,15 +8,19 @@ import static BabysitterCalculator.Keys.*;
 import static BabysitterCalculator.HourlyRates.*;
 
 /**
- * Created by jacobmenke
+ * Main class with psvm method
  */
 public class Main {
 
+    /**
+     * Main Method for execution
+     * @param args not used
+     */
     public static void main(String[] args) {
 
         //main hash to store all user data
 
-        String interactionType = "interactive";
+        String interactionType = "noninteractive";
 
         //do while loop to ensure at least one iteration if noninteractive
         do {
@@ -29,10 +33,10 @@ public class Main {
 
             HashMap<String, String> timesData = new HashMap<>(userData.get("timesData"));
 
-            BabysittingJob babysittingJob = new BabysittingJob(userData.get("personnelData").get(JOB_NAME), timesData.get(STARTING_TIME), timesData.get(BED_TIME), timesData.get(ENDING_TIME));
+            BabysittingJob babysittingJob = new BabysittingJob(userData.get("personnelData").get(JOB_NAME), timesData);
 
             //does babysitter decide to accept job?
-            String answer = babySitter.proposeJob(babysittingJob, timesData);
+            String answer = babySitter.proposeJob(babysittingJob);
 
             if (answer.equals("yes")) {
                 babySitter.says("I accept the job at '" + babysittingJob.getJobName() + "' because it has " +
