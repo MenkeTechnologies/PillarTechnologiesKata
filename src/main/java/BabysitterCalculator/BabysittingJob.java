@@ -2,6 +2,7 @@ package BabysitterCalculator;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
 /**
  * Created by jacobmenke on 4/27/17.
@@ -33,14 +34,36 @@ public class BabysittingJob {
     private Double endingTime;
     private Double bedTime;
 
+    public void setHoursMap(HashMap<String, Integer> hoursMap) {
+        this.hoursMap = hoursMap;
+    }
+
+    HashMap<String, Integer> hoursMap = new HashMap<>();
+
     public BabysittingJob(String jobName, String startingTime, String bedTime, String endingTime) {
         this.jobName = jobName;
 
         //convert string time to Double
         this.startingTime = formatStringTimeToDouble(startingTime);
-
         this.endingTime = formatStringTimeToDouble(endingTime);
         this.bedTime = formatStringTimeToDouble(bedTime);
+
+
+    }
+
+     void compensateFor24Hours() {
+         if (startingTime >= 0 && startingTime <= 12){
+             startingTime += 24;
+         }
+
+
+        if (bedTime >= 0 && bedTime <= 12){
+            bedTime += 24;
+        }
+
+        if (endingTime >= 0 && endingTime <= 12){
+           endingTime += 24;
+        }
     }
 
     private Double formatStringTimeToDouble(String genericTime) {
@@ -56,6 +79,8 @@ public class BabysittingJob {
             System.out.println("Invalid time: " + genericTime);
             System.exit(0);
         }
+
+
         return (double) localTime.getHour() + (double) localTime.getMinute() / 60;
     }
 
@@ -89,5 +114,9 @@ public class BabysittingJob {
 
     public void setBedTime(Double bedTime) {
         this.bedTime = bedTime;
+    }
+
+    public HashMap<String,Integer> getHoursMap(){
+        return hoursMap;
     }
 }

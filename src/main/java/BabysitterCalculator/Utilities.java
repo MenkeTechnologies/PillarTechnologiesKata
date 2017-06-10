@@ -11,10 +11,9 @@ import static BabysitterCalculator.Keys.*;
  * Created by jacobmenke on 6/9/17.
  */
 public class Utilities {
-
     private static void getDataInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
 
-        try (Scanner scanner = new Scanner(System.in)) {
+        Scanner scanner = new Scanner(System.in);
             loopUntilValid(personnelData, scanner, BABYSITTER_NAME);
 
             loopUntilValid(personnelData, scanner, JOB_NAME);
@@ -26,17 +25,15 @@ public class Utilities {
             loopUntilValid(timesData, scanner, BED_TIME);
 
             loopUntilValid(timesData, scanner, ENDING_TIME);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     private static void getDataNonInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
         personnelData.put(BABYSITTER_NAME, "Jane Doe");
         personnelData.put(JOB_NAME, "James' House");
-        timesData.put(STARTING_TIME, "8:30 pm");
-        timesData.put(BED_TIME, "11:30 pm");
-        timesData.put(ENDING_TIME, "3:00 am");
+        timesData.put(STARTING_TIME, "8:35 pm");
+        timesData.put(BED_TIME, "12:05 am");
+        timesData.put(ENDING_TIME, "2:00 am");
     }
 
     private static void loopUntilValid(HashMap<String, String> dataMap, Scanner scanner, String dataDescriptor) {
@@ -105,6 +102,7 @@ public class Utilities {
         }
         System.out.println();
     }
+
     static String sanitizeTimes(String possibleTime) throws Exception {
 
         StringBuilder sb = new StringBuilder();
@@ -121,28 +119,28 @@ public class Utilities {
 
         Integer formattedHour = validhour;
 
-        if (validhour == 0){
+        if (validhour == 0) {
             formattedHour = 12;
         }
 
-        if (validhour > 12){
-            formattedHour-=12;
+        if (validhour > 12) {
+            formattedHour -= 12;
         }
-
 
         String time = formattedHour + ":" + String.format("%02d", validMinutes) + " " + (validhour < 12 ? "am" : "pm");
 
         return time;
-
     }
 
-    static HashMap<String, HashMap<String, String>> getUserData() {
+    static HashMap<String, HashMap<String, String>> getUserData(String type) {
         HashMap<String, String> personnelData = new HashMap<>();
         HashMap<String, String> timesData = new HashMap<>();
 
-        getDataInteractively(personnelData, timesData);
-
-//        getDataNonInteractively(personnelData, timesData);
+        if (type.equals("interactive")) {
+            getDataInteractively(personnelData, timesData);
+        } else {
+            getDataNonInteractively(personnelData, timesData);
+        }
 
         HashMap<String, HashMap<String, String>> allData = new HashMap<>();
 

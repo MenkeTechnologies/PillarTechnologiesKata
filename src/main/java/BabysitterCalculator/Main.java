@@ -1,8 +1,11 @@
 package BabysitterCalculator;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import static BabysitterCalculator.Keys.*;
+import static BabysitterCalculator.HourlyRates.*;
 
 /**
  * Created by jacobmenke on 5/18/17.
@@ -11,37 +14,60 @@ public class Main {
     public static void main(String[] args) {
 
         //main hash to store all user data
-        HashMap<String, HashMap<String, String>> userData = Utilities.getUserData();
 
-        //construct main objects babysitter and babysitting job
-        BabySitter babySitter = new BabySitter(userData.get("personnelData").get(BABYSITTER_NAME));
+        String interactionType = "interactive";
 
-        HashMap<String, String> timesData = new HashMap<>(userData.get("timesData"));
+        do {
 
-        BabysittingJob babysittingJob = new BabysittingJob(userData.get("personnelData").get(JOB_NAME), timesData.get(STARTING_TIME), timesData.get(BED_TIME), timesData.get(ENDING_TIME));
+            HashMap<String, HashMap<String, String>> userData = Utilities.getUserData(interactionType);
 
-        String answer = babySitter.proposeJob(babysittingJob, timesData);
+            //construct main objects babysitter and babysitting job
+            BabySitter babySitter = new BabySitter(userData.get("personnelData").get(BABYSITTER_NAME));
 
-        if (answer.equals("yes")) {
-            babySitter.says("I accept the job at '" + babysittingJob.getJobName() + "' because it has " +
-                    "acceptable hours.");
+            HashMap<String, String> timesData = new HashMap<>(userData.get("timesData"));
 
-            babySitter.says(String.format("I will start at %s, the children will go to bed at %s and I will finish at %s.",
-                    userData.get("timesData").get(STARTING_TIME), userData.get("timesData").get(BED_TIME),
-                    userData.get("timesData").get(ENDING_TIME)));
+            BabysittingJob babysittingJob = new BabysittingJob(userData.get("personnelData").get(JOB_NAME), timesData.get(STARTING_TIME), timesData.get(BED_TIME), timesData.get(ENDING_TIME));
 
-            String pay = babySitter.calculatePay(babysittingJob);
+            String answer = babySitter.proposeJob(babysittingJob, timesData);
 
-            babySitter.says("My calculated pay is " + pay + " for " + babySitter.calculateHours(babysittingJob).get("totalHours") + " hours of work.");
-        } else {
+            if (answer.equals("yes")) {
+                babySitter.says("I accept the job at '" + babysittingJob.getJobName() + "' because it has " +
+                        "acceptable hours.");
+
+                babySitter.says(String.format("I will start at %s, the children will go to bed at %s and I will finish at %s.",
+                        userData.get("timesData").get(STARTING_TIME), userData.get("timesData").get(BED_TIME),
+                        userData.get("timesData").get(ENDING_TIME)));
+
+                //babysitter sets the hours map for the babysitting job
+                babySitter.calculateHours(babysittingJob);
+
+                //and calculates the total pay
+                String pay = babySitter.calculatePay(babysittingJob);
+                System.out.println();
+
+                babySitter.says(String.format("My breakdown is: \n\t%s hours from start to bedtime at $" + HOURLY_RATE_FROM_START_TO_BEDTIME + "/hr," +
+                                "\n\t%s hours from bedtime to midnight at $" + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT + "/hr,\n\t%s hours from midnight to end at $" + HOURLY_RATE_FROM_MIDNIGHT_TO_END + "/hr.", babysittingJob.getHoursMap().get("hoursStartingToBedtimeFloored"),
+                        babysittingJob.getHoursMap().get("hoursBedtimeToMidnightFloored"), babysittingJob.getHoursMap().get("hoursMidnighttoEndFloored")));
+                System.out.println();
+
+                babySitter.says("According to my calculations, the pay should be " + pay + " for " + babysittingJob.getHoursMap().get("totalHours") + " hours of work disregarding fractional hours that is.");
+            } else {
+
+                babySitter.says("I reject the job '" + babysittingJob.getJobName() + "' due to " +
+                        "unacceptable hours, namely " + answer);
+            }
+
+            if (interactionType.equals("interactive")) {
+                System.out.println("Another go?");
+
+                String goAgain = new Scanner(System.in).nextLine();
+
+                if (goAgain.equalsIgnoreCase("n") || goAgain.equalsIgnoreCase("no")) {
+                    break;
+                }
+            }
 
 
-            babySitter.says("I reject the job '" + babysittingJob.getJobName() + "' due to " +
-                    "unacceptable hours, namely " + answer);
-
-
-        }
+        } while (interactionType.equals("interactive"));
     }
-
-
 }

@@ -33,8 +33,16 @@ public class BabySitter {
         if (babysittingJob.getStartingTime() >= 17){
 
             if (babysittingJob.getEndingTime() <= 4) {
-                this.babysittingJob = babysittingJob;
-                return "yes";
+
+                babysittingJob.compensateFor24Hours();
+
+                if (babysittingJob.getStartingTime()  <= babysittingJob.getBedTime() && babysittingJob.getBedTime() <= babysittingJob.getEndingTime()){
+                    this.babysittingJob = babysittingJob;
+                    return "yes";
+                } else {
+                    return "an inappropriate bedtime at " + timesData.get(BED_TIME) + ".";
+                }
+
 
             } else {
                 return "the late ending time at " + timesData.get(ENDING_TIME) + ".";
@@ -65,27 +73,42 @@ public class BabySitter {
 
     public HashMap<String, Integer> calculateHours(BabysittingJob babysittingJob) {
 
+
+
         if (babysittingJob != null) {
 
+
             Double hoursStartingToBedtime = babysittingJob.getBedTime() - babysittingJob.getStartingTime();
+
 
             //midnight is at 24 hours
             Double hoursBedtimeToMidnight = 24 - babysittingJob.getBedTime();
 
+            if (hoursBedtimeToMidnight < 0) hoursBedtimeToMidnight = 0.0;
+
             //dont need to subtract because calculated from 0 or midnight
             Double hoursMidnighttoEnd = babysittingJob.getEndingTime();
 
-            Integer hoursStartingToBedtimeLong = removeFractional(hoursStartingToBedtime);
-            Integer hoursBedtimeToMidnightLong = removeFractional(hoursBedtimeToMidnight);
-            Integer hoursMidnighttoEndLong = removeFractional(hoursMidnighttoEnd);
+            if (hoursMidnighttoEnd >= 24){
+                hoursMidnighttoEnd -=24;
+            }
+
+
+            Integer hoursStartingToBedtimeFloored = removeFractional(hoursStartingToBedtime);
+            Integer hoursBedtimeToMidnightFloored = removeFractional(hoursBedtimeToMidnight);
+            Integer hoursMidnighttoEndFloored = removeFractional(hoursMidnighttoEnd);
+
 
             Integer hours = removeFractional(hoursStartingToBedtime) + removeFractional(hoursBedtimeToMidnight) + removeFractional(hoursMidnighttoEnd);
 
+
             HashMap<String, Integer> hourMap = new HashMap<>();
-            hourMap.put("hoursStartingToBedtimeLong", hoursStartingToBedtimeLong);
-            hourMap.put("hoursBedtimeToMidnightLong", hoursBedtimeToMidnightLong);
-            hourMap.put("hoursMidnighttoEndLong", hoursMidnighttoEndLong);
+            hourMap.put("hoursStartingToBedtimeFloored", hoursStartingToBedtimeFloored);
+            hourMap.put("hoursBedtimeToMidnightFloored", hoursBedtimeToMidnightFloored);
+            hourMap.put("hoursMidnighttoEndFloored", hoursMidnighttoEndFloored);
             hourMap.put("totalHours", hours);
+
+            babysittingJob.setHoursMap(hourMap);
 
             return hourMap;
         }
@@ -96,9 +119,9 @@ public class BabySitter {
 
         if (babysittingJob != null) {
 
-            HashMap<String, Integer> hoursMap = calculateHours(babysittingJob);
+            HashMap<String, Integer> hoursMap = babysittingJob.getHoursMap();
 
-            Double pay = (double) calculatePay(hoursMap.get("hoursStartingToBedtimeLong"), hoursMap.get("hoursBedtimeToMidnightLong"), hoursMap.get("hoursMidnighttoEndLong"));
+            Double pay = (double) calculatePay(hoursMap.get("hoursStartingToBedtimeFloored"), hoursMap.get("hoursBedtimeToMidnightFloored"), hoursMap.get("hoursMidnighttoEndFloored"));
 
             //no fractional hours
             return formatMoney(pay);
