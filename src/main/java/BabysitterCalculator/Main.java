@@ -20,7 +20,7 @@ public class Main {
 
         //main hash to store all user data
 
-        String interactionType = "noninteractive";
+        String interactionType = "interactive";
 
         //do while loop to ensure at least one iteration if noninteractive
         do {
