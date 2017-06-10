@@ -8,7 +8,7 @@ import static BabysitterCalculator.Keys.*;
 import static BabysitterCalculator.HourlyRates.*;
 
 /**
- * Created by jacobmenke on 5/18/17.
+ * Created by jacobmenke
  */
 public class Main {
 
@@ -65,7 +65,7 @@ public class Main {
                 babySitter.says("I reject the job '" + babysittingJob.getJobName() + "' due to " +
                         "unacceptable hours, namely " + answer);
             }
-
+            //check if user wants to do another round of calculations
             if (interactionType.equals("interactive")) {
                 System.out.println("Another go?");
 

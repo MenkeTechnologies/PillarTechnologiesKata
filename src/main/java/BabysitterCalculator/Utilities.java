@@ -8,7 +8,7 @@ import java.util.Scanner;
 import static BabysitterCalculator.Keys.*;
 
 /**
- * Created by jacobmenke on 6/9/17.
+ * created by jacobmenke
  */
 public class Utilities {
     /**
@@ -37,6 +37,7 @@ public class Utilities {
 
     /**
      * For quick testing purposes, hard code data into the two main hash maps
+     * obviating user interaction
      * @param personnelData
      * @param timesData
      */
@@ -94,17 +95,18 @@ public class Utilities {
 
             String userInput = scanner.nextLine().trim();
 
-            //only checking for some character in babysitter name and job name
+            //only checking for sole character in babysitter name and job name
             if (!userInput.equals("")) {
 
                 //check for valid time
                 if (key.contains("Time")) {
-
+                    //invalid time will throw exception here
                     try {
                         String validTime = Utilities.sanitizeTimes(userInput);
                         userInput = validTime;
                     } catch (Exception e) {
                         System.out.println(invalidMessage);
+                        //catch exception and try again for valid time
                         continue;
                     }
                 }
@@ -114,10 +116,11 @@ public class Utilities {
             }
             System.out.println(invalidMessage);
         }
-
+        //print out divider for formatting
         for (int i = 0; i < 50; i++) {
             System.out.print("_");
         }
+        //empty line for readability
         System.out.println();
     }
 
@@ -136,7 +139,7 @@ public class Utilities {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("h:mma");
 
-        //will throw exception if time is invalid which will lead to next iteration of while loop
+        //parse method here will throw exception if time is invalid which will lead to next iteration of while loop
         LocalTime localTime = LocalTime.parse(sb.toString().toUpperCase(), dtf);
 
         Integer validhour = localTime.getHour();

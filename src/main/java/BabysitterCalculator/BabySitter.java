@@ -6,7 +6,7 @@ import java.util.HashMap;
 import static BabysitterCalculator.Keys.*;
 
 /**
- * Created by jacobmenke on 4/27/17.
+ * Created by jacobmenke
  */
 public class BabySitter {
     private String name;
@@ -108,12 +108,14 @@ public class BabySitter {
                 hoursMidnighttoEnd -= 24;
             }
 
+            //remove fractions for calculations
             Integer hoursStartingToBedtimeFloored = removeFractional(hoursStartingToBedtime);
             Integer hoursBedtimeToMidnightFloored = removeFractional(hoursBedtimeToMidnight);
             Integer hoursMidnighttoEndFloored = removeFractional(hoursMidnighttoEnd);
-
+            //remove fractions for hours sum
             Integer hours = removeFractional(hoursStartingToBedtime) + removeFractional(hoursBedtimeToMidnight) + removeFractional(hoursMidnighttoEnd);
 
+            //store data in hashmap for readable retrieval later
             HashMap<String, Integer> hourMap = new HashMap<>();
             hourMap.put("hoursStartingToBedtimeFloored", hoursStartingToBedtimeFloored);
             hourMap.put("hoursBedtimeToMidnightFloored", hoursBedtimeToMidnightFloored);
