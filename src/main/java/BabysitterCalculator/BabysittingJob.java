@@ -5,24 +5,13 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
-
-
-class HourlyRates {
-    //constants for hourly rates
-    public static final Integer HOURLY_RATE_FROM_START_TO_BEDTIME = 12;
-    public static final Integer HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT = 8;
-    public static final Integer HOURLY_RATE_FROM_MIDNIGHT_TO_END= 16;
-
-}
-
 class Keys {
-    //hash keys for data hashmaps
+    //hash keys for data Hashmaps
     public static final String BABYSITTER_NAME = "babysitterName";
     public static final String JOB_NAME = "jobName";
     public static final String STARTING_TIME = "startingTime";
     public static final String BED_TIME = "bedTime";
     public static final String ENDING_TIME = "endingTime";
-
 }
 
 /**
@@ -33,11 +22,14 @@ public class BabysittingJob {
     private Double startingTime;
     private Double endingTime;
     private Double bedTime;
-
-
     HashMap<String, Integer> hoursMap = new HashMap<>();
-
     HashMap<String, String> timesData = new HashMap<>();
+    private boolean valid = true;
+
+    public boolean isValid() {
+        return valid;
+    }
+
 
     public HashMap<String, String> getTimesData() {
         return timesData;
@@ -45,29 +37,27 @@ public class BabysittingJob {
 
     /**
      * Constructor for tests
-     * @param jobName
-     * @param startingTime
-     * @param bedTime
-     * @param endingTime
+     *
+     * @param jobName name of the babysitting job
+     * @param startingTime starting time of job
+     * @param bedTime bedtime of job
+     * @param endingTime ending time of job
      */
     public BabysittingJob(String jobName, String startingTime, String bedTime, String endingTime) {
         this.jobName = jobName;
-        this.startingTime = formatStringTimeToDouble(startingTime);;
-        this.endingTime = formatStringTimeToDouble(endingTime);;
+        this.startingTime = formatStringTimeToDouble(startingTime);
+        this.endingTime = formatStringTimeToDouble(endingTime);
         this.bedTime = formatStringTimeToDouble(bedTime);
 
         this.timesData = new HashMap<>();
         timesData.put(Keys.STARTING_TIME, startingTime);
         timesData.put(Keys.ENDING_TIME, endingTime);
         timesData.put(Keys.BED_TIME, bedTime);
-
-
     }
 
     /**
-     *
-     * @param jobName
-     * @param timesData
+     * @param jobName the babysitting job name
+     * @param timesData Hashmap with all of the times
      */
     public BabysittingJob(String jobName, HashMap<String, String> timesData) {
         this.jobName = jobName;
@@ -80,43 +70,42 @@ public class BabysittingJob {
         this.timesData = new HashMap<>(timesData);
     }
 
-
-
     /**
-     *  add 24 hours to times for calculations
+     * add 24 hours to times for calculations
      */
-     void compensateFor24Hours() {
-         if (startingTime >= 0 && startingTime <= 12){
-             startingTime += 24;
-         }
+    void compensateFor24Hours() {
+        if (startingTime >= 0 && startingTime <= 12) {
+            startingTime += 24;
+        }
 
-
-        if (bedTime >= 0 && bedTime <= 12){
+        if (bedTime >= 0 && bedTime <= 12) {
             bedTime += 24;
         }
 
-        if (endingTime >= 0 && endingTime <= 12){
-           endingTime += 24;
+        if (endingTime >= 0 && endingTime <= 12) {
+            endingTime += 24;
         }
     }
 
     /**
      * Converts string into double representation of time
-     * @param genericTime
+     *
+     * @param genericTime possibly valid time in string form
      * @return double and fractional representation of time
      */
     private Double formatStringTimeToDouble(String genericTime) {
 
-        DateTimeFormatter dtf =DateTimeFormatter.ofPattern("h:mm a");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("h:mm a");
 
         LocalTime localTime = null;
         //parsing requires AM or PM so need to uppercase string input
         try {
             localTime = LocalTime.parse(genericTime.toUpperCase(), dtf);
         } catch (Exception e) {
-            //parsing threw exception so exit
+            //parsing threw exception
             System.out.println("Invalid time: " + genericTime);
-            System.exit(1);
+            valid = false;
+            return -1.0;
         }
 
         //return time as double with fraction, fraction will be floored later
@@ -160,6 +149,7 @@ public class BabysittingJob {
     /**
      * Setter for hoursMap
      * Called by babysitter's calculateHours method
+     *
      * @param hoursMap
      */
     public void setHoursMap(HashMap<String, Integer> hoursMap) {
@@ -168,9 +158,10 @@ public class BabysittingJob {
 
     /**
      * Getter for hoursMap
+     *
      * @return hoursMap used for outputting hours
      */
-    public HashMap<String,Integer> getHoursMap(){
+    public HashMap<String, Integer> getHoursMap() {
         return hoursMap;
     }
 }
