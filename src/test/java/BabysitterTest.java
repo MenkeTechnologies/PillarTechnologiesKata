@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 import static BabysitterCalculator.HourlyRates.*;
 import static BabysitterCalculator.BabySitter.formatMoney;
 
-public class tests {
+public class BabysitterTest {
     @Test
     public void validHoursEndingAfterMidnight() {
 

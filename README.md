@@ -3,12 +3,12 @@ https://github.com/PillarTechnology/kata-babysitter
 
 Dependencies are Git, Maven and Java
 
-Instructions for Compiling and Running Project
+Instructions for Compiling, Running Tests and Running Project
 
 ```
 git clone https://github.com/MenkeTechnologies/Pillar-Technology-Kata.git
 cd Pillar-Technology-Kata
-mvn clean package
+mvn clean installtest
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
 
