@@ -12,6 +12,11 @@ mvn clean install
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
 
+To Run All Tests
+```
+cd Pillar-Technology-Kata
+mvn test
+```
 
 Interaction type can be changed from interactive (read from command line) to noninteractive (data from getDataNonInteractively in Utilies.java) in BabysitterCalculator.Main
 
