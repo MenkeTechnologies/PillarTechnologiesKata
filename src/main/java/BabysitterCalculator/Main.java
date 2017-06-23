@@ -76,7 +76,7 @@ public class Main {
                 }
                 //check if user wants to do another round of calculations
                 if (interactionType.equals("interactive")) {
-                    System.out.println("Another go? y or n");
+                    System.out.print("Another calculation? (y or n) :");
 
                     String goAgain = new Scanner(System.in).nextLine();
 
