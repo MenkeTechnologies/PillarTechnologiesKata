@@ -73,14 +73,23 @@ public class BabySitter {
 //                }
             }
         } else {
-            //starting time is earlier than 5pm
-            reason += "the early starting time at " + timesData.get(STARTING_TIME);
-            if (babysittingJob.getEndingTime() <= 4) {
-                reason += ".";
-            } else {
-                //if both start and end times are invalid
-                reason += ", not to mention the late ending hours at " + timesData.get(ENDING_TIME) + ".";
+            //starting time is later than 12am
+            if (babysittingJob.getStartingTime() <= babysittingJob.getBedTime() && babysittingJob.getBedTime() <= 4)
+            {
+                babysittingJob.compensateFor24Hours();
+                return "yes";
+
+            } else{
+                //starting time earlier than 5pm
+                reason += "the early starting time at " + timesData.get(STARTING_TIME);
+                if (babysittingJob.getEndingTime() <= 4) {
+                    reason += ".";
+                } else {
+                    //if both start and end times are invalid
+                    reason += ", not to mention the late ending hours at " + timesData.get(ENDING_TIME) + ".";
+                }
             }
+
         }
         //error message outputted to user
         return reason;
@@ -112,7 +121,11 @@ public class BabySitter {
 
             if (babysittingJob.getEndingTime() >= 24){
                 //ending time is after midnight so calculate hours from bedtime to midnight
-                hoursBedtimeToMidnight = 24 - babysittingJob.getBedTime();
+                if (babysittingJob.getBedTime() <= 24){
+                    hoursBedtimeToMidnight = 24 - babysittingJob.getBedTime();
+                }
+                //otherwise hours from bed to midnight remain 0
+
             } else {
                 //ending time before midnight so just calculate from bedtime to endingtime
                 hoursBedtimeToMidnight = babysittingJob.getEndingTime() - babysittingJob.getBedTime();
@@ -126,6 +139,11 @@ public class BabySitter {
             //dont need to subtract because ending time calculated from 0 or midnight
             if (babysittingJob.getEndingTime() > 24 && babysittingJob.getEndingTime() <= 28) {
                 hoursMidnightToEnd = babysittingJob.getEndingTime();
+
+                //if bedtime is after midnight we wont include hours bt bedtime and midnight
+                if (babysittingJob.getBedTime() >= 24){
+                    hoursMidnightToEnd -= (babysittingJob.getBedTime()-24);
+                }
             }
 
             //compensate for 24 hour compensation introduced earlier

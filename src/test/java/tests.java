@@ -245,7 +245,7 @@ public class tests {
 
         String pay = babySitter.calculatePay(babysittingJob);
 
-        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 1.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 3;
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 1.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 2;
 
         assertEquals(formatMoney(expectedPay), pay);
     }
@@ -263,7 +263,7 @@ public class tests {
 
         String pay = babySitter.calculatePay(babysittingJob);
 
-        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 0.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 3;
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 0.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 2;
 
         assertEquals(formatMoney(expectedPay), pay);
     }

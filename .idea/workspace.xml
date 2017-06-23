@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828181e5-12d5-4189-86d2-5779e8412359" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabysittingJob.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabysittingJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests.java" afterPath="$PROJECT_DIR$/src/test/java/tests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +21,8 @@
       <file leaf-file-name="BabySitter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
               <folding>
                 <element signature="e#374#375#0" expanded="true" />
                 <element signature="e#406#407#0" expanded="true" />
@@ -30,10 +30,10 @@
                 <element signature="e#464#465#0" expanded="true" />
                 <element signature="e#513#514#0" expanded="true" />
                 <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#3134#3135#0" expanded="true" />
-                <element signature="e#3205#3206#0" expanded="true" />
-                <element signature="e#7424#7425#0" expanded="true" />
-                <element signature="e#7487#7488#0" expanded="true" />
+                <element signature="e#3462#3463#0" expanded="true" />
+                <element signature="e#3533#3534#0" expanded="true" />
+                <element signature="e#8139#8140#0" expanded="true" />
+                <element signature="e#8202#8203#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,8 +42,8 @@
       <file leaf-file-name="BabysittingJob.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabysittingJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="105" column="66" lean-forward="false" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="66" />
+            <state relative-caret-position="128">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding>
                 <element signature="e#868#869#0" expanded="true" />
                 <element signature="e#896#897#0" expanded="true" />
@@ -55,8 +55,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+            <state relative-caret-position="915">
+              <caret line="66" column="41" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="66" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/tests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="455">
-              <caret line="319" column="150" lean-forward="false" selection-start-line="319" selection-start-column="150" selection-end-line="319" selection-end-column="150" />
+              <caret line="319" column="91" lean-forward="true" selection-start-line="319" selection-start-column="91" selection-end-line="319" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,12 +120,12 @@
         <option value="$PROJECT_DIR$/src/main/java/BabysittingJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/BabySitter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/HourlyRates.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabysittingJob.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests.java" />
       </list>
     </option>
@@ -328,36 +328,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="tests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="tests" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="untitled" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="tests (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="tests" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="untitled" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="tests.InvalidHours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="untitled" />
@@ -387,6 +357,48 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="tests" />
       <option name="METHOD_NAME" value="wageCalculationEndingAfterMidnight" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="tests.wageCalculationStartingTimeAtMidnight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="untitled" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests" />
+      <option name="METHOD_NAME" value="wageCalculationStartingTimeAtMidnight" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="tests.wageCalculationStartingTimeAfterMidnight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="untitled" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="tests" />
+      <option name="METHOD_NAME" value="wageCalculationStartingTimeAfterMidnight" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -933,18 +945,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.tests" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Application.tests" />
-      <item index="3" class="java.lang.String" itemvalue="Application.tests (1)" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.tests.InvalidHours" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationEndingAfterMidnight" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.tests.InvalidHours" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationEndingAfterMidnight" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAtMidnight" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAfterMidnight" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationEndingAfterMidnight" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.tests.InvalidHours" />
-        <item index="3" class="java.lang.String" itemvalue="Application.tests (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.tests" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAfterMidnight" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAtMidnight" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationEndingAfterMidnight" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.tests.InvalidHours" />
       </list>
     </recent_temporary>
   </component>
@@ -981,44 +993,44 @@
       <workItem from="1497058973788" duration="5819000" />
       <workItem from="1497066905494" duration="1692000" />
       <workItem from="1497140976109" duration="11000" />
-      <workItem from="1498238741189" duration="8974000" />
+      <workItem from="1498238741189" duration="11468000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests - 2017.06.23 at 18h 02m 25s.xml">
+    <history-entry file="tests - 2017.06.23 at 19h 08m 30s.xml">
       <configuration name="tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 06m 47s.xml">
+    <history-entry file="tests - 2017.06.23 at 19h 08m 35s.xml">
       <configuration name="tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 08m 36s.xml">
+    <history-entry file="tests - 2017.06.23 at 19h 08m 50s.xml">
       <configuration name="tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 09m 48s.xml">
+    <history-entry file="tests - 2017.06.23 at 19h 09m 04s.xml">
       <configuration name="tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 11m 17s.xml">
-      <configuration name="tests" configurationId="JUnit" />
+    <history-entry file="tests_wageCalculationStartingTimeAfterMidnight - 2017.06.23 at 19h 08m 08s.xml">
+      <configuration name="tests.wageCalculationStartingTimeAfterMidnight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 12m 10s.xml">
-      <configuration name="tests" configurationId="JUnit" />
+    <history-entry file="tests_wageCalculationStartingTimeAfterMidnight - 2017.06.23 at 19h 08m 27s.xml">
+      <configuration name="tests.wageCalculationStartingTimeAfterMidnight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 12m 51s.xml">
-      <configuration name="tests" configurationId="JUnit" />
+    <history-entry file="tests_wageCalculationStartingTimeAtMidnight - 2017.06.23 at 18h 54m 04s.xml">
+      <configuration name="tests.wageCalculationStartingTimeAtMidnight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 15m 40s.xml">
-      <configuration name="tests" configurationId="JUnit" />
+    <history-entry file="tests_wageCalculationStartingTimeAtMidnight - 2017.06.23 at 19h 01m 05s.xml">
+      <configuration name="tests.wageCalculationStartingTimeAtMidnight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 18m 16s.xml">
-      <configuration name="tests" configurationId="JUnit" />
+    <history-entry file="tests_wageCalculationStartingTimeAtMidnight - 2017.06.23 at 19h 01m 49s.xml">
+      <configuration name="tests.wageCalculationStartingTimeAtMidnight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="tests - 2017.06.23 at 18h 18m 44s.xml">
-      <configuration name="tests" configurationId="JUnit" />
+    <history-entry file="tests_wageCalculationStartingTimeAtMidnight - 2017.06.23 at 19h 07m 47s.xml">
+      <configuration name="tests.wageCalculationStartingTimeAtMidnight" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57367000" />
+    <option name="totallyTimeSpent" value="59861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="166" y="23" width="1629" height="1173" extended-state="0" />
@@ -1034,7 +1046,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0818662" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30900475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30900475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23981042" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1091,10 +1103,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1130,10 +1142,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1169,10 +1181,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1208,10 +1220,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1247,10 +1259,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1286,10 +1298,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1325,10 +1337,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1356,10 +1368,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1387,10 +1399,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1418,10 +1430,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1479,10 +1491,10 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1507,19 +1519,6 @@
         <state relative-caret-position="315">
           <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -1594,18 +1593,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabysittingJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="105" column="66" lean-forward="false" selection-start-line="105" selection-start-column="66" selection-end-line="105" selection-end-column="66" />
+        <state relative-caret-position="128">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="e#868#869#0" expanded="true" />
             <element signature="e#896#897#0" expanded="true" />
@@ -1615,8 +1619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
           <folding>
             <element signature="e#374#375#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
@@ -1624,18 +1628,26 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#513#514#0" expanded="true" />
             <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#7424#7425#0" expanded="true" />
-            <element signature="e#7487#7488#0" expanded="true" />
+            <element signature="e#3462#3463#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#8139#8140#0" expanded="true" />
+            <element signature="e#8202#8203#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+        <state relative-caret-position="915">
+          <caret line="66" column="41" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="66" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1643,7 +1655,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/tests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
-          <caret line="319" column="150" lean-forward="false" selection-start-line="319" selection-start-column="150" selection-end-line="319" selection-end-column="150" />
+          <caret line="319" column="91" lean-forward="true" selection-start-line="319" selection-start-column="91" selection-end-line="319" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
