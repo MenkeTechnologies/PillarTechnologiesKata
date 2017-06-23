@@ -103,7 +103,7 @@ public class BabysittingJob {
             localTime = LocalTime.parse(genericTime.toUpperCase(), dtf);
         } catch (Exception e) {
             //parsing threw exception
-            System.out.println("Invalid time: " + genericTime);
+            System.out.println("Invalid time: " + genericTime + ".");
             valid = false;
             return -1.0;
         }

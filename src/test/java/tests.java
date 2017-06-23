@@ -114,6 +114,17 @@ public class tests {
     }
 
     @Test
+    public void AllInvalidHours() {
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "3:00 pm", "10:00 am", "5:00 am");
+
+        assertNotEquals("yes", babySitter.proposeJob(babysittingJob));
+    }
+
+
+    @Test
     public void wageCalculationEndingBeforeMidnight() {
 
         BabySitter babySitter = new BabySitter("Jane Doe");
@@ -184,6 +195,134 @@ public class tests {
 
         assertEquals(formatMoney(expectedPay), pay);
     }
+
+    @Test
+    public void wageCalculationEndingAfterMidnightAllFractional() {
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "8:15 pm", "10:15 pm", "12:45 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 2.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 1 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 0;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+    @Test
+    public void wageCalculationEndingAfterMidnightAllFractionalLateEnd() {
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "8:05 pm", "11:15 pm", "3:45 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 3.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 3;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+    @Test
+    public void wageCalculationStartingTimeAtMidnight() {
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "12:00 am", "1:00 am", "3:45 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 1.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 3;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+    @Test
+    public void wageCalculationStartingTimeAfterMidnight() {
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "12:15 am", "1:00 am", "3:45 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 0.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 3;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+    @Test
+    public void MaximumHoursWageCalculation(){
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "5:00 pm", "12:00 am", "4:00 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 7.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 4;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+    @Test
+    public void MaximumHoursBedtimeBeforeMidnightWageCalculation(){
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "5:00 pm", "11:00 pm", "4:00 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 6.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 1 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 4;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+    @Test
+    public void MaximumHoursBedtimeAfterMidnightWageCalculation(){
+
+        BabySitter babySitter = new BabySitter("Jane Doe");
+
+        BabysittingJob babysittingJob = new BabysittingJob("test", "5:00 pm", "1:00 am", "4:00 am");
+
+        assertEquals("yes", babySitter.proposeJob(babysittingJob));
+
+        babySitter.calculateHours(babysittingJob);
+
+        String pay = babySitter.calculatePay(babysittingJob);
+
+        Double expectedPay = HOURLY_RATE_FROM_START_TO_BEDTIME * 8.0 + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT * 0 + HOURLY_RATE_FROM_MIDNIGHT_TO_END * 3;
+
+        assertEquals(formatMoney(expectedPay), pay);
+    }
+
+
 
 
 }
