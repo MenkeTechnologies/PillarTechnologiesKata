@@ -20,7 +20,7 @@ public class Main {
 
         //main hash to store all user data
 
-        String interactionType = "interactive";
+        String interactionType = "noninteractive";
 
         //do while loop to ensure at least one iteration if noninteractive
         do {
@@ -63,7 +63,7 @@ public class Main {
                 //extra newline for readability
                 System.out.println();
 
-                babySitter.says("According to my calculations, the pay should be " + pay + " for " + babysittingJob.getHoursMap().get("totalHours") + " hours of work disregarding fractional hours that is.");
+                babySitter.says("According to my calculations, the pay should be " + pay + " for " + babysittingJob.getHoursMap().get("totalHours") + " hours of work disregarding fractional hours.");
             } else {
 
                 babySitter.says("I reject the job '" + babysittingJob.getJobName() + "' due to " +
@@ -71,7 +71,7 @@ public class Main {
             }
             //check if user wants to do another round of calculations
             if (interactionType.equals("interactive")) {
-                System.out.println("Another go?");
+                System.out.println("Another go? y or n");
 
                 String goAgain = new Scanner(System.in).nextLine();
 

@@ -40,7 +40,8 @@ public class BabySitter {
         HashMap<String, String> timesData = babysittingJob.getTimesData();
         String reason = "";
 
-        //check for valid starting and ending times, times are doubles
+        //check for valid starting and ending times
+        // times are doubles
         if (babysittingJob.getStartingTime() >= 17) {
 
             if (babysittingJob.getEndingTime() <= 4) {
@@ -58,8 +59,21 @@ public class BabySitter {
                     return "an inappropriate bedtime at " + timesData.get(BED_TIME) + ".";
                 }
             } else {
-                //the ending time is later than 4 am
-                return "the late ending time at " + timesData.get(ENDING_TIME) + ".";
+                //ending time is too late or before midnight in this block
+
+                if (babysittingJob.getEndingTime() < 12){
+                    //the ending time is later than 4 am and less than 12pm the following day
+                    return "the late ending time at " + timesData.get(ENDING_TIME) + ".";
+                } else {
+                    //ending time is before midnight
+                    //check to make sure ending time is after bedtime
+                    if (babysittingJob.getStartingTime() <= babysittingJob.getBedTime() && babysittingJob.getBedTime() <= babysittingJob.getEndingTime()){
+                        return "yes";
+                    }
+
+                }
+
+
             }
         } else {
             //starting time is earlier than 5pm

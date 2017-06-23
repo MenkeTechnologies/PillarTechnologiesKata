@@ -13,8 +13,8 @@ import static BabysitterCalculator.Keys.*;
 public class Utilities {
     /**
      * Get all necessary data in while loop structure, looping until valid
-     * @param personnelData
-     * @param timesData
+     * @param personnelData Hashmap with babysitter and job name
+     * @param timesData Hashmap with the starting, bed and ending times
      */
     public static void getDataInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
 
@@ -37,21 +37,21 @@ public class Utilities {
     /**
      * For quick testing purposes, hard code data into the two main hash maps
      * obviating user interaction
-     * @param personnelData
-     * @param timesData
+     * @param personnelData Hashmap with babysitter and job name
+     * @param timesData Hashmap with the starting, bed and ending times
      */
     public static void getDataNonInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
         personnelData.put(BABYSITTER_NAME, "Jane Doe");
         personnelData.put(JOB_NAME, "James' House");
         timesData.put(STARTING_TIME, "8:35 pm");
-        timesData.put(BED_TIME, "12:05 am");
-        timesData.put(ENDING_TIME, "2:00 am");
+        timesData.put(BED_TIME, "10:00 pm");
+        timesData.put(ENDING_TIME, "11:30 pm");
     }
 
     /**
      * Build up the prompts and invalid messages
-     * @param dataMap
-     * @param scanner
+     * @param dataMap Hashmap with all the data
+     * @param scanner reference to user input scanner
      * @param dataDescriptor controls switch statement
      */
     public static void loopUntilValid(HashMap<String, String> dataMap, Scanner scanner, String dataDescriptor) {
@@ -126,7 +126,7 @@ public class Utilities {
 
     /**
      * Check if the starting, bed and ending times are valid
-     * @param possibleTime
+     * @param possibleTime a string version of an unsanitized time
      * @return properly formatted and valid time
      * @throws Exception if invalid time
      */
