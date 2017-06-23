@@ -12,4 +12,8 @@ mvn clean package
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
 
+
+interation type can be changed from iteractive to noninteractive in BabysitterCalculator.Main
+
+
 # created by Jacob Menke
