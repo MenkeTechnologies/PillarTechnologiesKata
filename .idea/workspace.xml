@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828181e5-12d5-4189-86d2-5779e8412359" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Main.class" afterPath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Utilities.class" afterPath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Utilities.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests.java" afterPath="$PROJECT_DIR$/src/test/java/tests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+              <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
               <folding>
                 <element signature="e#374#375#0" expanded="true" />
                 <element signature="e#406#407#0" expanded="true" />
@@ -52,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="66" column="41" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="66" selection-end-column="41" />
+            <state relative-caret-position="165">
+              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -65,18 +68,18 @@
       <file leaf-file-name="Utilities.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+            <state relative-caret-position="156">
+              <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="319" column="91" lean-forward="true" selection-start-line="319" selection-start-column="91" selection-end-line="319" selection-end-column="91" />
+            <state relative-caret-position="560">
+              <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,12 +124,12 @@
         <option value="$PROJECT_DIR$/src/main/java/BabySitter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/HourlyRates.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabysittingJob.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java" />
         <option value="$PROJECT_DIR$/src/test/java/tests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" />
       </list>
     </option>
   </component>
@@ -307,7 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.tests">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration default="false" name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -952,9 +955,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAfterMidnight" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAtMidnight" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAfterMidnight" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationStartingTimeAtMidnight" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.tests.wageCalculationEndingAfterMidnight" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.tests.InvalidHours" />
       </list>
@@ -993,7 +996,7 @@
       <workItem from="1497058973788" duration="5819000" />
       <workItem from="1497066905494" duration="1692000" />
       <workItem from="1497140976109" duration="11000" />
-      <workItem from="1498238741189" duration="11468000" />
+      <workItem from="1498238741189" duration="11806000" />
     </task>
     <servers />
   </component>
@@ -1030,11 +1033,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59861000" />
+    <option name="totallyTimeSpent" value="60199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="166" y="23" width="1629" height="1173" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1046,9 +1048,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0818662" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30900475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30900475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23981042" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23981042" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18714556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1620,7 +1622,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/BabySitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+          <caret line="109" column="26" lean-forward="false" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
           <folding>
             <element signature="e#374#375#0" expanded="true" />
             <element signature="e#406#407#0" expanded="true" />
@@ -1636,29 +1638,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="66" column="41" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="66" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="560">
+          <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="45" column="43" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state relative-caret-position="156">
+          <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="319" column="91" lean-forward="true" selection-start-line="319" selection-start-column="91" selection-end-line="319" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

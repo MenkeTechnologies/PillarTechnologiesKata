@@ -18,9 +18,12 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        //main hash to store all user data
 
-        String interactionType = "noninteractive";
+        //data from command line user input
+        String interactionType = "interactive";
+
+        //uncomment next line to get data from method: getDataNonInteractively in Utilities class
+        //interactionType = "noninteractive";
 
         //do while loop to ensure at least one iteration if noninteractive
         do {

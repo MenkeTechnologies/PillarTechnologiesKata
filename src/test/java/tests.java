@@ -322,7 +322,4 @@ public class tests {
         assertEquals(formatMoney(expectedPay), pay);
     }
 
-
-
-
 }

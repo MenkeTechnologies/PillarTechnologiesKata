@@ -43,7 +43,7 @@ public class Utilities {
     public static void getDataNonInteractively(HashMap<String, String> personnelData, HashMap<String, String> timesData) {
         personnelData.put(BABYSITTER_NAME, "Jane Doe");
         personnelData.put(JOB_NAME, "James' House");
-        timesData.put(STARTING_TIME, "8:00 m");
+        timesData.put(STARTING_TIME, "8:00 pm");
         timesData.put(BED_TIME, "10:00 pm");
         timesData.put(ENDING_TIME, "2:00 am");
     }
