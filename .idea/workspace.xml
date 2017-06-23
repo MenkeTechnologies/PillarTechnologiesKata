@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="828181e5-12d5-4189-86d2-5779e8412359" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Main.class" afterPath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Utilities.class" afterPath="$PROJECT_DIR$/target/classes/BabysitterCalculator/Utilities.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" afterPath="$PROJECT_DIR$/src/main/java/BabysitterCalculator/Utilities.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests.java" afterPath="$PROJECT_DIR$/src/test/java/tests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -996,7 +991,7 @@
       <workItem from="1497058973788" duration="5819000" />
       <workItem from="1497066905494" duration="1692000" />
       <workItem from="1497140976109" duration="11000" />
-      <workItem from="1498238741189" duration="11806000" />
+      <workItem from="1498238741189" duration="11851000" />
     </task>
     <servers />
   </component>
@@ -1033,7 +1028,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60199000" />
+    <option name="totallyTimeSpent" value="60244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="166" y="23" width="1629" height="1173" extended-state="0" />
