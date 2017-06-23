@@ -17,6 +17,11 @@ To Run All Tests
 cd Pillar-Technology-Kata
 mvn test
 ```
+To Run just the InvalidHoursStarting test (replace the InvalidHoursStarting with another method name to run any other single test)
+```
+mvn '-Dtest=BabysitterTest#InvalidHoursStarting test'
+```
+
 
 Interaction type can be changed from interactive (read from command line) to noninteractive (data from getDataNonInteractively in Utilies.java) in BabysitterCalculator.Main
 
