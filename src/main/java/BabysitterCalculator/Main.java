@@ -24,7 +24,7 @@ public class Main {
         //uncomment next line to get data from method: getDataNonInteractively in Utilities class
         //interactionType = "noninteractive";
 
-        //do while loop to ensure at least one iteration if noninteractive
+        //do while loop to ensure at least one iteration if interaction typnoninteractive
         do {
 
             //main data structure, contains babysitter and job data in one hash and times data in another hash
