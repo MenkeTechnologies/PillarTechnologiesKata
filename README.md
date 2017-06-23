@@ -6,8 +6,8 @@ Dependencies are Git, Maven and Java
 Instructions for Compiling and Running Project
 
 ```
-git clone https://github.com/MenkeTechnologies/PillarTechnologiesKata.git
-cd PillarTechnologiesKata
+git clone https://github.com/MenkeTechnologies/Pillar-Technology-Kata.git
+cd Pillar-Technology-Kata
 mvn clean package
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
