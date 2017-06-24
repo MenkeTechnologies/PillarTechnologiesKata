@@ -48,8 +48,8 @@ public class Main {
                             "acceptable hours.");
 
                     babySitter.says(String.format("I will start at %s, the children will go to bed at %s and I will finish at %s.",
-                            userData.get("timesData").get(STARTING_TIME), userData.get("timesData").get(BED_TIME),
-                            userData.get("timesData").get(ENDING_TIME)));
+                                userData.get("timesData").get(STARTING_TIME), userData.get("timesData").get(BED_TIME),
+                                userData.get("timesData").get(ENDING_TIME)));
 
                     //babysitter sets the hours map for the babysitting job
                     babySitter.calculateHours(babysittingJob);
@@ -63,8 +63,8 @@ public class Main {
                     //print out floored (nonfractional) hours in tabular format
                     //hoursMap property in BabysittingJob object has all the hours
                     babySitter.says(String.format("My breakdown is: \n\t%s hours from start to bedtime at $" + HOURLY_RATE_FROM_START_TO_BEDTIME + "/hr," +
-                                    "\n\t%s hours from bedtime to midnight at $" + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT + "/hr,\n\t%s hours from midnight to end at $" + HOURLY_RATE_FROM_MIDNIGHT_TO_END + "/hr.", babysittingJob.getHoursMap().get("hoursStartingToBedtimeFloored"),
-                            babysittingJob.getHoursMap().get("hoursBedtimeToMidnightFloored"), babysittingJob.getHoursMap().get("hoursMidnightToEndFloored")));
+                                "\n\t%s hours from bedtime to midnight at $" + HOURLY_RATE_FROM_BEDTIME_TO_MIDNIGHT + "/hr,\n\t%s hours from midnight to end at $" + HOURLY_RATE_FROM_MIDNIGHT_TO_END + "/hr.", babysittingJob.getHoursMap().get("hoursStartingToBedtimeFloored"),
+                                babysittingJob.getHoursMap().get("hoursBedtimeToMidnightFloored"), babysittingJob.getHoursMap().get("hoursMidnightToEndFloored")));
                     //extra newline for readability
                     System.out.println();
 
@@ -82,6 +82,7 @@ public class Main {
 
                     if (goAgain.equalsIgnoreCase("n") || goAgain.equalsIgnoreCase("no")) {
                         break;
+
                     }
                 }
             }
