@@ -13,12 +13,12 @@ mvn clean install
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
 
-To Run All Tests
+To run all tests
 ```
 cd Pillar-Technology-Kata
 mvn test
 ```
-To Run just the InvalidHoursStarting test (replace InvalidHoursStarting with another method name to run any other single test)
+To run just the InvalidHoursStarting test (replace InvalidHoursStarting with another method name to run any other single test)
 ```
 cd Pillar-Technology-Kata
 mvn '-Dtest=BabysitterTest#InvalidHoursStarting' test
