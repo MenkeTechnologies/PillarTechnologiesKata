@@ -16,7 +16,7 @@ To Run All Tests
 ```
 cd Pillar-Technology-Kata
 mvn test
-    ```
+```
 To Run just the InvalidHoursStarting test (replace InvalidHoursStarting with another method name to run any other single test)
 ```
 cd Pillar-Technology-Kata
