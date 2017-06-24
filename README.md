@@ -9,7 +9,7 @@ Instructions for Compiling, Running Tests and Running Main
 ```
 git clone https://github.com/MenkeTechnologies/Pillar-Technology-Kata.git
 cd Pillar-Technology-Kata
-mvn install
+mvn clean install
 java -cp target/com.jakobmenke.pillarkata-1.0.jar BabysitterCalculator.Main
 ```
 
