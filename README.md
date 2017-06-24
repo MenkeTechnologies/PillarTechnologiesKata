@@ -1,5 +1,6 @@
 # Pillar Technology Kata
-https://github.com/PillarTechnology/kata-babysitter
+
+Kata description @ https://github.com/PillarTechnology/kata-babysitter
 
 Dependencies are Git, Maven and Java
 
