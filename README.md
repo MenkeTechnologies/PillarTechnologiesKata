@@ -1,4 +1,6 @@
-# Pillar Technology Kata
+# Pillar Technology BabySitter Kata
+
+![babysitter](babsitter.jpg)
 
 Kata description @ https://github.com/PillarTechnology/kata-babysitter
 
