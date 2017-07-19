@@ -1,6 +1,6 @@
 # Pillar Technology BabySitter Kata
 
-![babysitter](/babsitter.jpg)
+![babysitter](/babysitter.jpg)
 
 Kata description @ https://github.com/PillarTechnology/kata-babysitter
 
